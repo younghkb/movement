@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  	<title>Movement</title>
+
+	<!--<link href="../Syntax/bootstrap/css/bootstrap.css" rel="stylesheet">-->
+    <link href="../syntax-2/style.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+</head>
+
+
+
+<body>
+<label class="title"> Programming Movement </label>
+          <ul class="fade" id="list">
+
+
+      </ul>
+      <div id="buttons">
+        <button id="add-to-list" class="add">Add a movement</button>
+        <button id="create" class="create">Create phrase</button> 
+      </div>
+
+
+
+
+
+</body>
+
+<!--<script src="../Syntax/bootstrap/js/bootstrap.js"></script>-->
+
+<script src="app.js"></script>
+
+
+
+
+</html>
