@@ -15,6 +15,21 @@ li {
   text-transform: uppercase;
 }
 
+.first {
+  background: #3cd19e;
+  color: #fff;
+  line-height: 2em;
+  margin: 0;
+  padding: 0 0.5em;
+  overflow: hidden;
+  width: 10em;
+  text-transform: uppercase;
+  height: 2em;
+  margin: 2px 0;
+  height: 38vh;
+  width: 75vh;
+}
+
 li.show {
   height: 2em;
   margin: 2px 0;
@@ -33,14 +48,19 @@ li.show {
   opacity: 1;
 }
 
-.turnintodropdown {
-  width: 74vh;
+
+.instruction {
+  float:left;
+  height: 38px;
+  vertical-align: center;
+  width: 20vh;
 }
 
-.time {
-  margin-left: 10vh;
-  width: 35vh;
+.field {
+  float:right;
+  width: 48vh;
 }
+
 
 .label {
   font-size: 20px;
