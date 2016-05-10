@@ -19,26 +19,26 @@
         <p> 
           <label class="label">Movement No. 1:     </label> 
           <div class="instruction"> Vertical: </div>
-          <select class="field"> 
+          <select class="field" id="vertical1"> 
                   <option value="high">High</option> 
                   <option value="medium">Medium</option> 
                   <option value="Deep">Deep</option> 
           </select> 
           <div class="instruction"> Lateral: </div>
-          <select class="field"> 
+          <select class="field" id="lateral1"> 
                   <option value="left">Left</option> 
                   <option value="right">Right</option> 
                   <option value="none">None</option> 
            </select> 
            <div class="instruction"> Sagittal: </div>
-           <select class="field"> 
+           <select class="field" id="sagittal1"> 
                   <option value="left">Forward</option> 
                   <option value="back">Back</option> 
                   <option value="none">None</option> 
            </select> 
         </p> 
 
-     <div class="instruction"> Time (sec): </div> <input name="username" type="text" class="field" placeholder="3">  
+     <div class="instruction"> Time (sec): </div> <input name="username" type="text" class="field" placeholder="3" id="time1">  
       </form> 
     </li>
   </ul>
@@ -50,7 +50,7 @@
   <!--Buttons for the user to add movements and create a phrase-->    
   <div id="buttons">
     <button id="add-to-list" class="add">Add a movement</button>
-    <button id="create" class="create">Create phrase</button> 
+    <button id="create" class="create" onclick="createPhrase()">Create phrase</button> 
   </div>
 </body>
 

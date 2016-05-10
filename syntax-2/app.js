@@ -1,8 +1,7 @@
 /*
  * Hannah Young
  * DSL's, Spring 2016
- * Controlling the syntax and grabbing values
- * The IR Level
+ * Controlling the syntax and grabbing values to create the IR
  */
 
 // Global counter to track each movement
@@ -21,26 +20,26 @@ document.getElementById('add-to-list').onclick = function() {
                   + '<p>'
                   + '<label class="label">Movement No. ' + counter + ':</label>'
                   + '<div class="instruction"> Vertical: </div>'
-                  + '<select class="field">'
+                  + '<select class="field" id="vertical' + counter + '">'
                   + '<option value="high">High</option>'
                   + '<option value="medium">Medium</option>'
                   + '<option value="deep">Deep</option>'
                   + '</select>'
                   + '<div class="instruction"> Lateral: </div>'
-                  + '<select class="field">'
+                  + '<select class="field" id="lateral' + counter + '">'
                   + '<option value="left">Left</option>'
                   + '<option value="right">Right</option>'
                   + '<option value="none">None</option>'
                   + '</select>'
                   + '<div class="instruction"> Sagittal: </div>'
-                  + '<select class="field">'
+                  + '<select class="field" id="sagittal' + counter +'">'
                   + '<option value="forward">Forward</option>'
                   + '<option value="back">Back</option>'
                   + '<option value="none">None</option>'
                   + '</select>'
                   + '</p>'
                   + ' <div class="instruction"> Time (sec): </div>'
-                  + '<input name="username" type="text" class="field" placeholder="3">'
+                  + '<input name="username" type="text" class="field" placeholder="3" id="time' + counter + '">'
                   + '</form>';
   list.appendChild(newLI);
   counter++;
@@ -55,6 +54,36 @@ document.getElementById('add-to-list').onclick = function() {
  * Function that will grab the user's entire movement phrase
  * If movement phrase contains invalid values, returns errors
  */
+function createPhrase() {
+    var phrase = [];
+
+    for (var i = 1; i< counter; i++)
+    {
+        var vertical = document.getElementById("vertical" + i);
+        var verticalSelect = vertical.options[vertical.selectedIndex].text;
+
+        var lateral = document.getElementById("lateral" + i);
+        var lateralSelect = lateral.options[lateral.selectedIndex].text;
+
+        var sagittal = document.getElementById("sagittal" + i);
+        var sagittalSelect = sagittal.options[sagittal.selectedIndex].text;
+
+        var time = document.getElementById("time" + i);
+        var timeSelect = time.value;
+
+        // TODO, improve time error handling
+        if (timeSelect == "")
+        {
+            timeSelect = 3;
+        }
+
+        var movement = [verticalSelect, lateralSelect, sagittalSelect, timeSelect];
+        phrase.push(movement);
+    }
+
+    console.log(phrase);
+    return phrase;
+}
 
 
 
